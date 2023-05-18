@@ -1,9 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Container, Col, CardGroup } from 'react-bootstrap';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { Link,useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 function Home() {
   const navigate = useNavigate()
   const [blogs, setBlog] = useState([]);
