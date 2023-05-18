@@ -10,7 +10,7 @@ function Home() {
   const fetchALlBlog = async () => {
     
     try {
-      const res = await axios.get('http://localhost:3500/v1/getAllBlogs', {
+      const res = await axios.get('https://blog-app-3fq7.onrender.com/v1/getAllBlogs', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }

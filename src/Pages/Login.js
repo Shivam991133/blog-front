@@ -14,7 +14,7 @@ function Login() {
   const handleLogin =async(e)=>{
     e.preventDefault()
     try {
-      const res = await axios.post('http://localhost:3500/v1/login',input);
+      const res = await axios.post('https://blog-app-3fq7.onrender.com/v1/login',input);
       localStorage.setItem('token',res.data.token);
       localStorage.setItem('userName',res.data.result.userName)  ;
       console.log(res);

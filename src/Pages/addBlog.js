@@ -19,7 +19,7 @@ const AddBlog = () => {
 
     const fetchALlCategrory = async () => {
         try {
-            const res = await axios.get('http://localhost:3500/v1/getAllCategory', {
+            const res = await axios.get('https://blog-app-3fq7.onrender.com/v1/getAllCategory', {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
@@ -50,7 +50,7 @@ const AddBlog = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:3500/v1/addNewBlog', formData, {
+            const res = await axios.post('https://blog-app-3fq7.onrender.com/v1/addNewBlog', formData, {
 
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`

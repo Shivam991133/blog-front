@@ -15,7 +15,7 @@ function Register() {
   const formHandler =async(e)=>{
     e.preventDefault()
     try {
-      const res = await axios.post('http://localhost:3500/v1/signup',input)
+      const res = await axios.post('https://blog-app-3fq7.onrender.com/v1/signup',input)
       alert(res.data.message)
       navigate('/login')
     } catch (error) {
