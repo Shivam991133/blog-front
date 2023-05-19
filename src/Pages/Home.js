@@ -35,7 +35,7 @@ function Home() {
       {blogs && blogs.length > 0 ? (
         blogs.map((item, index) => (
           <div key={index}>
-            <Card.Img style={{ height: '300px', width: '400px' }} variant="top" src={`http://localhost:3500/${item.thumbnail}`} />
+            <Card.Img style={{ height: '300px', width: '400px' }} variant="top" src={`https://blog-app-3fq7.onrender.com/${item.thumbnail}`} />
             <Card.Body style={{ width: '400px' }}>
               <Card.Title>{item.title}</Card.Title>
               <Card.Text>{item.description}</Card.Text>
