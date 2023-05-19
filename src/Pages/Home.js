@@ -8,7 +8,7 @@ function Home() {
   const [blogs, setBlog] = useState([]);
 
   const fetchALlBlog = async () => {
-    
+
     try {
       const res = await axios.get('https://blog-app-3fq7.onrender.com/v1/getAllBlogs', {
         headers: {
@@ -29,37 +29,23 @@ function Home() {
   }, [])
 
 
+
   return (
     <div>
-      {
-        blogs && blogs.length > 0 ? (
-
-          blogs.map((item, index) => {
-
-            return (
-              <div>
-                {blogs && blogs.length > 0 ? (
-                  blogs.map((item, index) => (
-                    <div key={index}>
-                      <Card.Img style={{ height: '300px', width: '400px' }} variant="top" src={`https://blog-app-3fq7.onrender.com/${item.thumbnail}`} />
-                      <Card.Body style={{ width: '400px' }}>
-                        <Card.Title>{item.title}</Card.Title>
-                        <Card.Text>{item.description}</Card.Text>
-                          <Button onClick={()=>navigate('/addBlog')} variant="primary">Go Back</Button>
-                      </Card.Body>
-                    </div>
-                  ))
-                ) : (
-                  <h2>No Post</h2>
-                )}
-              </div>
-
-            )
-          }
-          )
-        )
-          : <h2> No Post</h2>
-      }
+      {blogs && blogs.length > 0 ? (
+        blogs.map((item, index) => (
+          <div key={index}>
+            <Card.Img style={{ height: '300px', width: '400px' }} variant="top" src={`http://localhost:3500/${item.thumbnail}`} />
+            <Card.Body style={{ width: '400px' }}>
+              <Card.Title>{item.title}</Card.Title>
+              <Card.Text>{item.description}</Card.Text>
+              <Button onClick={() => navigate('/addBlog')} variant="primary">Go Back</Button>
+            </Card.Body>
+          </div>
+        ))
+      ) : (
+        <h2>No Post</h2>
+      )}
     </div>
   )
 }
